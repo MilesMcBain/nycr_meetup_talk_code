@@ -1,0 +1,40 @@
+---
+title: "Untitled Draft"
+author: "Report Author"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(drake)
+library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE)
+loadd(word_lengths)
+loadd(word_lengths_histogram)
+```
+
+## Analysis
+
+The were `r sum(word_lengths$Freq)` words in the input.
+
+```{r}
+word_lengths_histogram
+```
+
+
+## Reproducibility
+
+<details><summary>Reproducibility receipt</summary>
+
+```{r}
+## datetime
+Sys.time()
+
+## repository
+git2r::repository()
+
+## session info
+sessionInfo()
+```
+
+</details>
