@@ -6,11 +6,9 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-library(drake)
-library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE)
-loadd(word_lengths)
-loadd(word_lengths_histogram)
+tar_load(word_lengths)
+tar_load(word_lengths_histogram)
 ```
 
 ## Analysis
